@@ -1,0 +1,87 @@
+.row {
+  padding: 0 40px;
+  margin: 0 0 40px 0;
+}
+
+.row__title {
+  font-size: 2rem;
+}
+
+.row__posters {
+  display: flex;
+  align-items: center;
+  overflow: auto hidden;
+  padding: 13px 20px;
+}
+
+.row__posters::-webkit-scrollbar {
+  background: inherit;
+  height: 8px;
+}
+
+.row__posters::-webkit-scrollbar-thumb {
+  background: #e50914;
+  border-radius: 4px;
+}
+
+.row__posters .row__poster {
+  position: relative;
+  min-width: 160px;
+  max-height: 100px;
+  margin-right: 20px;
+  object-fit: contain;
+  transition: all .2s;
+}
+
+.row__posters .row__poster img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.row__posters .row__poster .poster__name {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  font-size: 15px;
+  text-transform: capitalize;
+  opacity: 0;
+  cursor: pointer;
+  transition: all .2s;
+}
+
+.row__posters .row__poster.row__poster--large {
+  max-height: 250px;
+}
+
+.row__posters .row__poster.row__poster--large .poster__name {
+  font-size: 20px;
+}
+
+.row__posters .row__poster.row__poster--large:hover {
+  transform: scale(1.1);
+  transition: all .2s;
+}
+
+.row__posters .row__poster:last-child {
+  margin-right: 0;
+}
+
+.row__posters .row__poster:hover {
+  transform: scale(1.24);
+  transition: all .2s;
+}
+.row__posters .row__poster:hover .poster__name {
+  opacity: 1;
+  transition: all .2s;
+}
+
+.row__trailer {
+  width: 100%;
+}

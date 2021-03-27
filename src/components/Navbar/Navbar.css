@@ -1,0 +1,24 @@
+.navbar {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  padding: 10px 40px;
+  transition: all .2s;
+}
+
+.navbar--black {
+  background: #111;
+  transition: all .5s;
+}
+
+.navbar__logo,
+.navbar__user {
+  max-height: 22px;
+  stroke: #e50914;
+  fill: #e50914;
+}
